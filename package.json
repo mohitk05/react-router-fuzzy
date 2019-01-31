@@ -1,6 +1,6 @@
 {
   "name": "react-router-fuzzy",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A react-router wrapper for handling incorrect routes using fuzzy search.",
   "author": "mohitk05",
   "license": "MIT",
