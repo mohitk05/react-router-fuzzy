@@ -23,7 +23,7 @@ const WrappedSwitch = withFuzzy(Switch, Route)
 export default class SomeComponent extends Component {
   render () {
     return (
-      <WrappedSwitch notFound={}>
+      <WrappedSwitch notFound={custom404}>
         <Route path="/about" render={props => <div>About</div>} />
         <Route path="/docs" render={props => <div>Docs</div>} />
         <Route path="/pricing" render={props => <div>Pricing</div>} />
