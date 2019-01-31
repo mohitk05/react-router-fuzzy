@@ -20,6 +20,11 @@ import withFuzzy from 'react-router-fuzzy'
 
 const WrappedSwitch = withFuzzy(Switch, Route)
 
+const custom404 = props => {
+  //custom component receives 'nearest' as a prop
+  return <div>{props.nearest.map(n => <i>{n[1]}</i>)}</div>
+}
+
 export default class SomeComponent extends Component {
   render () {
     return (
@@ -33,10 +38,6 @@ export default class SomeComponent extends Component {
   }
 }
 
-const custom404 = props => {
-  //custom component receives 'nearest' as a prop
-  return <div>{props.nearest.map(n => <i>{n[1]}</i>)}</div>
-}
 ```
 
 ## License
