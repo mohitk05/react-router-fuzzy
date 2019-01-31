@@ -11,18 +11,31 @@ npm install --save react-router-fuzzy
 ```
 
 ## Usage
+`react-router-fuzzy` provides a wrapper, `withFuzzy` for `Switch` component of `react-router-dom`. It also requires `Route` to be sent as it adds a default 404 route as a child to `Switch`. This component displays a list of nearest routes to the current path, if no matching route is found. You can specify your own 404 component, which then receives a `nearest` prop, which is an array of results as per [fuzzyset.js](https://glench.github.io/fuzzyset.js/) output.
 
 ```jsx
 import React, { Component } from 'react'
+import { Switch, Route } from 'react-router-dom'
+import withFuzzy from 'react-router-fuzzy'
 
-import MyComponent from 'react-router-fuzzy'
+const WrappedSwitch = withFuzzy(Switch, Route)
 
-class Example extends Component {
+export default class SomeComponent extends Component {
   render () {
     return (
-      <MyComponent />
+      <WrappedSwitch notFound={}>
+        <Route path="/about" render={props => <div>About</div>} />
+        <Route path="/docs" render={props => <div>Docs</div>} />
+        <Route path="/pricing" render={props => <div>Pricing</div>} />
+        <Route path="/contact" render={props => <div>Contact</div>} />
+      </WrappedSwitch>
     )
   }
+}
+
+const custom404 = props => {
+  //custom component receives 'nearest' as a prop
+  return <div>{props.nearest.map(n => <i>{n[1]}</i>)}</div>
 }
 ```
 
