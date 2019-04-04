@@ -22,7 +22,7 @@ export default class App extends Component {
         <h2><a target="_blank" href="https://www.npmjs.com/package/react-router-fuzzy">react-router-fuzzy</a></h2>
         <p>A react-router wrapper for handling incorrect routes using fuzzy search<span role="img" aria-label="flash"> ⚡️</span></p>
         <span style={{color: '#aaa', marginBottom: 5}}>Try an incorrect route e.g. prcing</span>
-        <span><span className="url">https://localhost:3000/</span><input onKeyPress style={{width: 200}} placeholder="Some route" onChange={e => this.setState({random: e.target.value})} /><button onClick={() => this.navigate('/' + this.state.random)}>Go →</button></span>
+        <span><span className="url">https://localhost:3000/</span><input style={{width: 200}} placeholder="Some route" onChange={e => this.setState({random: e.target.value})} /><button onClick={() => this.navigate('/' + this.state.random)}>Go →</button></span>
         <div className="window">
           <div className="tabs">
             <p onClick={() => this.navigate('/about')}>About</p>
