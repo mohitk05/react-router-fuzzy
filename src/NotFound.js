@@ -9,7 +9,7 @@ export default class NotFound extends React.Component {
     console.log('not found props', this.props)
     return (
       <div>
-`       <h2>Looking for something else?</h2>
+        <h2>Looking for something else?</h2>
         {this.props.nearest.map(n => {
           return <p onClick={() => this.navigate(n[1])}>{n[1]}</p>
         })}

@@ -1,5 +1,111 @@
 body {
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  max-width: 80%;
+  margin: auto;
+  height: 90vh;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family:  'Work Sans', sans-serif;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.App h2{
+  margin: 0
+}
+
+.window{
+  width: 100%;
+  height: auto;
+  border: 2px solid #eee;
+  border-top: 0;
+  border-radius: 5px
+}
+
+.url{
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 2px solid #eee;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  background: #eee;
+  font-family: 'Work Sans', sans-serif
+}
+
+input{
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 2px solid #eee;
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+  font-family: 'Work Sans', sans-serif
+}
+
+button {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 2px solid #eee;
+  border-left: none;
+  background: #eee;
+  border-radius: 0px 5px 5px 0px;
+  font-family: 'Work Sans', sans-serif
+}
+
+button:hover{
+  cursor: pointer;
+  color: #ff768d
+}
+
+.tabs{
+  display: flex;
+  width: 100%;
+  justify-content: space-between
+}
+
+.tabs p{
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;  
+  margin: 0;
+  width: 100%;
+  background: #eee;
+  transition: background 200ms ease-in-out;
+  justify-content: center;
+  display: flex
+}
+
+.tabs p:hover {
+  cursor: pointer;
+  background: #ddd;
+}
+
+.notFound{
+  
+}
+
+hr{
+  border: 0;
+  clear: both;
+  display: block;
+  width: 100%;
+  background-color: #ddd;
+  height: 1px;
 }
