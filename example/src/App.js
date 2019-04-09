@@ -16,7 +16,6 @@ export default class App extends Component {
     history.push(path)
   }
   render () {
-    console.log(this.props)
     return (
       <div className="App">
         <h2><a target="_blank" href="https://www.npmjs.com/package/react-router-fuzzy">react-router-fuzzy</a></h2>
